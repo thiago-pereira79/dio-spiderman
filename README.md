@@ -1,5 +1,11 @@
 # 🕸️ Multiversos do Homem-Aranha
 
+![Licença](https://img.shields.io/badge/Licença-MIT-green)
+![Status](https://img.shields.io/badge/Status-Finalizado-brightgreen)
+![Feito com](https://img.shields.io/badge/Feito%20com-HTML%20%7C%20CSS%20%7C%20JavaScript-blue)
+
+---
+
 Um projeto visual e interativo inspirado no multiverso do Homem-Aranha, com foco em animações, efeitos visuais e navegação entre diferentes versões do herói.  
 Essa aplicação foi desenvolvida como parte do curso da **Digital Innovation One (DIO)**, explorando técnicas modernas de HTML, CSS e JavaScript.
 
