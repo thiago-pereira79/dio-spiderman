@@ -1,104 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multiverso | Spiderman</title>
-  <link href="../../assets/css/internal.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+  <meta charset="UTF-8" />
+  <title>Spider-Man (2002) – Tobey Maguire</title>
+
+  <!-- CSS: reset + personagem -->
+  <link rel="stylesheet" href="../../assets/css/reset.css" />
+  <link rel="stylesheet" href="../../assets/css/personagens.css" />
 </head>
-<body>
-  <div class="s-wrapper">
-    
-    <video autoplay loop>
-      <source src="../../assets/videos/spiderman-2002-trailer.mp4" type="video/mp4" />
-    </video>
+<body class="personagem">
+  <!-- Vídeo de fundo -->
+  <video
+    class="bg-video"
+    src="../../assets/videos/spiderman-2002-trailer.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+  ></video>
+  <div class="bg-overlay"></div>
 
-    <div class="s-left-column">
-      <nav class="navigator">
-        <div class="navigator__icon">
-          <a href="../../index.html">
-            <img src="../../assets/images/icons/spiderman1.png" />
-          </a>
-        </div>
-        <ul>
-          <li><a href="#01">01</a></li>
-          <li><a href="spiderman2.html">02</a></li>
-          <li><a href="spiderman3.html">03</a></li>
-        </ul>
-      </nav>
-    </div>
+  <main class="personagem-main">
+    <!-- Coluna lateral 01 / 02 / 03 -->
+    <aside class="timeline">
+      <div class="timeline-line"></div>
 
-
-    <div class="s-main-content">
-      <div class="s-main-content__top">
-        <div class="s-logo">
-          <img src="../../assets/images/spiderman-tobey/movie-01/logo.png" alt="Spiderman (2002)"
-            title="Spiderman (2002)" />
-        </div>
-
-        <div class="s-description">
-          <div class="pills">
-            <ul>
-              <li>Ano: 2002</li>
-              <li>Diretor: Sam Raimi</li>
-            </ul>
-          </div>
-
-          <div class="s-description__text">
-            <p><strong>Sinopse:</strong>&nbsp;Depois de ser picado por uma aranha geneticamente modificada em uma
-              demonstração científica, o jovem nerd Peter Parker ganha superpoderes. Inicialmente, ele pretende usá-los
-              para para ganhar dinheiro, adotando o nome de Homem-Aranha e se apresentando em lutas de exibição. Porém,
-              ao presenciar o assassinando de seu tio Ben e sentir-se culpado, Peter decide não mais usar seus poderes
-              para proveito próprio e sim para enfrentar o mal, tendo como seu primeiro grande desafio o psicótico
-              Duende Verde.</p>
-          </div>
-        </div>
-
-        <div class="s-links">
-          <ul>
-            <li>
-              <a href="https://www.youtube.com/watch?v=TYMMOjBUPMM" class="link-button" target="_blank">
-                <span class="icon">
-                  <div class="play-icon">&nbsp;</div>
-                </span>
-                <span class="label">
-                  Assistir trailer
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
+      <div class="timeline-logo">
+        <!-- usa o MESMO ícone que você já usa nas outras páginas -->
+        <img src="../../assets/images/icons/spider.svg" alt="Spider logo" />
       </div>
 
-      <div class="s-main-content__bottom">
+      <div class="timeline-buttons">
+        <button class="timeline-dot active" data-section="01">01</button>
+        <button class="timeline-dot" data-section="02">02</button>
+        <button class="timeline-dot" data-section="03">03</button>
+      </div>
+    </aside>
+
+    <!-- Conteúdo à direita -->
+    <section class="personagem-content">
+      <!-- SEÇÃO 01 – SINOPSE -->
+      <div class="personagem-section active" id="section-01">
+        <img
+          class="movie-logo"
+          src="../../assets/images/spiderman-tobey/movie-01/logo.png"
+          alt="Spider-Man (2002)"
+        />
+
+        <div class="movie-tags">
+          <span class="movie-tag">ANO: 2002</span>
+          <span class="movie-tag">DIRETOR: SAM RAIMI</span>
+        </div>
+
+        <h2 class="section-title">Sinopse</h2>
+        <p class="section-text">
+          Depois de ser picado por uma aranha geneticamente modificada em uma
+          demonstração científica, o jovem nerd Peter Parker ganha superpoderes.
+          Inicialmente, ele pretende usá-los para ganhar dinheiro, adotando o
+          nome de Homem-Aranha e se apresentando em lutas de exibição. Porém, ao
+          presenciar o assassinato de seu tio Ben e sentir-se culpado, Peter
+          decide não mais usar seus poderes para proveito próprio e sim para
+          enfrentar o mal, tendo como seu primeiro grande desafio o psicótico
+          Duende Verde.
+        </p>
+      </div>
+
+      <!-- SEÇÃO 02 – TRAILER -->
+      <div class="personagem-section" id="section-02">
+        <img
+          class="movie-logo"
+          src="../../assets/images/spiderman-tobey/movie-01/logo.png"
+          alt="Spider-Man (2002)"
+        />
+
+        <div class="movie-tags">
+          <span class="movie-tag">TRAILER OFICIAL</span>
+        </div>
+
+        <h2 class="section-title">Trailer oficial</h2>
+        <p class="section-text">
+          Clique no botão abaixo para assistir ao trailer do filme diretamente
+          no YouTube.
+        </p>
+
+        <a
+          class="trailer-link"
+          href="https://www.youtube.com/watch?v=t06RUxPbp_c"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Assistir trailer no YouTube
+        </a>
+      </div>
+
+      <!-- SEÇÃO 03 – CENAS + VOLTAR -->
+      <div class="personagem-section" id="section-03">
+        <img
+          class="movie-logo"
+          src="../../assets/images/spiderman-tobey/movie-01/logo.png"
+          alt="Spider-Man (2002)"
+        />
+
+        <div class="movie-tags">
+          <span class="movie-tag">CENAS ICÔNICAS</span>
+        </div>
+
+        <h2 class="section-title">Cenas icônicas</h2>
+
         <div class="gallery">
-          <ul>
-            <li>
-              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-01/gallery/image-01-full.jpg">
-                <img src="../../assets/images/spiderman-tobey/movie-01/gallery/image-01.png" alt="">
-              </a>
-            </li>
-            <li>
-              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-01/gallery/image-02-full.jpg">
-                <img src="../../assets/images/spiderman-tobey/movie-01/gallery/image-02.png" alt="">
-              </a>
-            </li>
-            <li>
-              <a data-fancybox href="../../assets/images/spiderman-tobey/movie-01/gallery/image-03-full.jpg">
-                <img src="../../assets/images/spiderman-tobey/movie-01/gallery/image-03.png" alt="">
-              </a>
-            </li>
-          </ul>
+          <img
+            src="../../assets/images/spiderman-tobey/movie-01/gallery/image-01.png"
+            alt="Cena icônica 1"
+          />
+          <img
+            src="../../assets/images/spiderman-tobey/movie-01/gallery/image-02.png"
+            alt="Cena icônica 2"
+          />
+          <img
+            src="../../assets/images/spiderman-tobey/movie-01/gallery/image-03.png"
+            alt="Cena icônica 3"
+          />
         </div>
+
+        <a class="back-button" href="../../index.html">Voltar para o multiverso</a>
       </div>
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-  <script>
-    //  JavaScript will go here
-  </script>
+    </section>
+  </main>
+
+  <script src="../../assets/scripts/personagem.js"></script>
 </body>
 </html>

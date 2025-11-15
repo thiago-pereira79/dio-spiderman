@@ -13,9 +13,15 @@ body::before {
   background-size: cover;
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   opacity: 0.2;
   transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+  z-index: -1;
+}
+
+main {
+  min-height: 100vh;
+  padding-top: 2rem;
 }
 
 .s-menu {
@@ -23,6 +29,7 @@ body::before {
   width: 100%;
   text-align: center;
   position: relative;
+  z-index: 5;
 }
 
 .s-menu__item {
@@ -31,11 +38,21 @@ body::before {
   margin: 0 1.25rem;
 }
 
+.s-menu__item a {
+  font-weight: 600;
+}
+
 .s-menu__icon {
   width: 2.5rem;
   margin: 0 1.25rem;
   vertical-align: middle;
 }
+
+.s-menu__icon img {
+  width: 100%;
+}
+
+/* container principal */
 
 .s-container {
   position: relative;
@@ -43,6 +60,7 @@ body::before {
   align-items: center;
   justify-content: space-evenly;
   perspective: 3000px;
+  margin-top: 2rem;
 }
 
 .s-card {
@@ -92,14 +110,17 @@ body::before {
   transition: bottom 1s ease-in-out;
 }
 
+/* controlador em fluxo normal */
+
 .s-controller {
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
-  bottom: 1.5rem;
+  margin-bottom: 3rem;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .s-controller__button {
@@ -115,7 +136,7 @@ body::before {
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  z-index: 1;
+  z-index: 3;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -183,4 +204,60 @@ body[id^="spider-man-"] .s-card:not(.s-card--hovered) {
   width: calc(100vw / 3 - 10%);
   transform-style: preserve-3d;
   transition: transform 0.4s ease-in;
+}
+
+/* Popup "Sobre o Projeto" no canto */
+
+.s-about {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  max-width: 420px;
+  padding: 1.75rem 2.25rem 1.75rem 2rem;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.s-about--visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.s-about h2 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
+.s-about p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* botão de fechar do popup */
+
+.s-about__close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.9rem;
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Ocultar os botões 01 / 02 / 03 somente na HOME */
+.home .s-controller {
+    display: none !important;
 }

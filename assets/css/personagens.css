@@ -1,0 +1,280 @@
+/* ===== LAYOUT GERAL DA PÁGINA DE PERSONAGEM ===== */
+
+body.personagem {
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #fff;
+  background-color: #000;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Vídeo de fundo em tela cheia */
+.bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(0.4);
+}
+
+/* Overlay escuro por cima do vídeo para leitura */
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.05), transparent 55%),
+              linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95));
+  z-index: -1;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+
+.personagem-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 3rem 6rem;
+  box-sizing: border-box;
+}
+
+/* ===== COLUNA LATERAL 01 / 02 / 03 ===== */
+
+.timeline {
+  position: sticky;
+  top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  width: 3px;
+  background: linear-gradient(to bottom, #ffffff33, #ffffffaa);
+  z-index: -1;
+}
+
+.timeline-logo {
+  margin-bottom: 1rem;
+}
+
+.timeline-logo img {
+  width: 40px;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.4));
+}
+
+.timeline-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.timeline-dot {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
+}
+
+.timeline-dot:hover {
+  transform: translateX(3px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.timeline-dot.active {
+  background: #e50914;
+  border-color: #fff;
+  box-shadow: 0 0 12px rgba(229, 9, 20, 0.8);
+}
+
+/* ===== ÁREA DE CONTEÚDO (DIREITA) ===== */
+
+.personagem-content {
+  flex: 1;
+  max-width: 900px;
+}
+
+/* Logo do filme */
+.movie-logo {
+  max-width: 480px;
+  margin-bottom: 1.5rem;
+}
+
+/* Badges de ano/diretor */
+.movie-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.movie-tag {
+  background: #e50914;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* Sinopse / textos principais */
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.section-text {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  max-width: 70ch;
+}
+
+/* Botão de assistir trailer (link) */
+.trailer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #e50914;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.trailer-link::before {
+  content: "▶";
+  font-size: 0.9rem;
+}
+
+.trailer-link:hover {
+  background: #e50914;
+  transform: translateY(-1px);
+}
+
+/* Galeria de cenas */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.8);
+  border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Botão voltar */
+.back-button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.9rem 2.4rem;
+  border-radius: 999px;
+  background: #fff;
+  color: #111;
+  font-weight: 600;
+  border: none;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.8);
+  transition: 0.2s ease;
+}
+
+.back-button:hover {
+  transform: translateY(-1px);
+  background: #f5f5f5;
+}
+
+/* ===== SISTEMA DE ABAS (01 / 02 / 03) ===== */
+
+.personagem-section {
+  display: none;
+  animation: fadeIn 0.25s ease;
+}
+
+.personagem-section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVO BÁSICO ===== */
+
+@media (max-width: 1024px) {
+  .personagem-main {
+    padding: 2.5rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .personagem-main {
+    flex-direction: column;
+  }
+
+  .timeline {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .timeline-line {
+    display: none;
+  }
+
+  .timeline-buttons {
+    flex-direction: row;
+  }
+
+  .movie-logo {
+    max-width: 320px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

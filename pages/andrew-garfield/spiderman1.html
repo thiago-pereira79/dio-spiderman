@@ -1,86 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spider Man | Multiverso</title>
-  <link href="../../assets/css/internal.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <title>The Amazing Spider-Man – Andrew Garfield</title>
+
+  <link rel="stylesheet" href="../../assets/css/reset.css" />
+  <link rel="stylesheet" href="../../assets/css/personagens.css" />
 </head>
+<body class="personagem">
+  <video
+    class="bg-video"
+    src="../../assets/videos/amazing-spiderman-2012-trailer.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+  ></video>
+  <div class="bg-overlay"></div>
 
-<body>
-  <div class="s-wrapper">
-    <video autoplay loop>
-      <source src="../../assets/videos/amazing-spiderman-2014-trailer.mp4" type="video/mp4" />
-    </video>
+  <main class="personagem-main">
+    <aside class="timeline">
+      <div class="timeline-line"></div>
 
-    <!--  Coluna da esquerda com menu (Left Column with menu)  -->
-    <div class="s-left-column">
-      <nav class="navigator">
-        <div class="navigator__icon">
-          <a href="../../index.html">
-            <img src="../../assets/images/icons/spiderman1-andrew.png" />
-          </a>
-        </div>
-        <ul>
-          <li><a href="#01" class="active">01</a></li>
-          <li><a href="spiderman2.html">02</a></li>
-        </ul>
-      </nav>
-    </div>
-    <!-- FIM - Coluna da esquerda com menu (Left Column with menu)  -->
-
-    <div class="s-main-content">
-      <div class="s-main-content__top">
-        <div class="s-logo">
-          <img src="../../assets/images/spiderman-andrew/movie-01/logo.png" alt="Spiderman (2002)"
-            title="Spiderman (2002)" />
-        </div>
-
-        <div class="s-description">
-          <div class="pills">
-            <ul>
-              <li>Ano: 2002</li>
-              <li>Diretor: Sam Raimi</li>
-            </ul>
-          </div>
-          <div class="s-description__text">
-            <p><strong>Sinopse:</strong>&nbsp;Depois de ser picado por uma aranha geneticamente modificada em uma
-              demonstração científica, o jovem nerd Peter Parker ganha superpoderes. Inicialmente, ele pretende usá-los
-              para para ganhar dinheiro, adotando o nome de Homem-Aranha e se apresentando em lutas de exibição. Porém,
-              ao presenciar o assassinando de seu tio Ben e sentir-se culpado, Peter decide não mais usar seus poderes
-              para proveito próprio e sim para enfrentar o mal, tendo como seu primeiro grande desafio o psicótico
-              Duende Verde.</p>
-          </div>
-        </div>
-
-        <div class="s-links">
-          <ul>
-            <li>
-              <a href="https://www.youtube.com/watch?v=TYMMOjBUPMM" class="link-button" target="_blank">
-                <span class="icon">
-                  <div class="play-icon">&nbsp;</div>
-                </span>
-                <span class="label">
-                  Assistir trailer
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div class="timeline-logo">
+        <img src="../../assets/images/icons/spider.svg" alt="Spider logo" />
       </div>
 
-      <div class="s-main-content__bottom">
+      <div class="timeline-buttons">
+        <button class="timeline-dot active" data-section="01">01</button>
+        <button class="timeline-dot" data-section="02">02</button>
+        <button class="timeline-dot" data-section="03">03</button>
+      </div>
+    </aside>
+
+    <section class="personagem-content">
+      <!-- 01 -->
+      <div class="personagem-section active" id="section-01">
+        <img
+          class="movie-logo"
+          src="../../assets/images/spiderman-andrew/movie-01/logo.png"
+          alt="The Amazing Spider-Man"
+        />
+
+        <div class="movie-tags">
+          <span class="movie-tag">ANO: 2012</span>
+          <span class="movie-tag">DIRETOR: MARC WEBB</span>
+        </div>
+
+        <h2 class="section-title">Sinopse</h2>
+        <p class="section-text">
+          Peter Parker investiga o passado de seus pais e acaba descobrindo uma
+          ligação com o laboratório Oscorp. Ao ser picado por uma aranha
+          geneticamente modificada, ele ganha poderes e passa a atuar como
+          Homem-Aranha enquanto precisa enfrentar o Dr. Curt Connors, que se
+          transforma na ameaçadora criatura conhecida como Lagarto.
+        </p>
+      </div>
+
+      <!-- 02 -->
+      <div class="personagem-section" id="section-02">
+        <img
+          class="movie-logo"
+          src="../../assets/images/spiderman-andrew/movie-01/logo.png"
+          alt="The Amazing Spider-Man"
+        />
+
+        <div class="movie-tags">
+          <span class="movie-tag">TRAILER OFICIAL</span>
+        </div>
+
+        <h2 class="section-title">Trailer oficial</h2>
+        <p class="section-text">
+          Assista ao trailer oficial de <strong>The Amazing Spider-Man</strong>
+          no YouTube.
+        </p>
+
+        <a
+          class="trailer-link"
+          href="https://www.youtube.com/watch?v=-tnxzJ0SSOw"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Assistir trailer no YouTube
+        </a>
+      </div>
+
+      <!-- 03 -->
+      <div class="personagem-section" id="section-03">
+        <img
+          class="movie-logo"
+          src="../../assets/images/spiderman-andrew/movie-01/logo.png"
+          alt="The Amazing Spider-Man"
+        />
+
+        <div class="movie-tags">
+          <span class="movie-tag">CENAS ICÔNICAS</span>
+        </div>
+
+        <h2 class="section-title">Cenas icônicas</h2>
+
         <div class="gallery">
-          <ul>
-            <li><a href="#"><img src="../../assets/images/spiderman-andrew/movie-01/gallery/image-01.png" alt=""></a></li>
-            <li><a href="#"><img src="../../assets/images/spiderman-andrew/movie-01/gallery/image-02.png" alt=""></a></li>
-            <li><a href="#"><img src="../../assets/images/spiderman-andrew/movie-01/gallery/image-03.png" alt=""></a></li>
-          </ul>
+          <img
+            src="../../assets/images/spiderman-andrew/movie-01/gallery/image-01.png"
+            alt="Peter e Gwen"
+          />
+          <img
+            src="../../assets/images/spiderman-andrew/movie-01/gallery/image-02.png"
+            alt="Homem-Aranha vs Lagarto"
+          />
+          <img
+            src="../../assets/images/spiderman-andrew/movie-01/gallery/image-03.png"
+            alt="Homem-Aranha em ação"
+          />
         </div>
+
+        <a class="back-button" href="../../index.html">Voltar para o multiverso</a>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
+
+  <script src="../../assets/scripts/personagem.js"></script>
 </body>
 </html>
